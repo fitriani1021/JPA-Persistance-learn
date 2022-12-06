@@ -1,6 +1,7 @@
-package com.enigmacamp.restapi.repository;
+package com.enigmacamp.restapi.repository.implementation;
 
 import com.enigmacamp.restapi.model.Course;
+import com.enigmacamp.restapi.repository.interfaces.CourseArrayRepository;
 import com.enigmacamp.restapi.util.IRandomStringGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

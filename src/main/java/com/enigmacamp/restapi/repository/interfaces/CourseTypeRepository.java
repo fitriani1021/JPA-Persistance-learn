@@ -1,4 +1,4 @@
-package com.enigmacamp.restapi.repository;
+package com.enigmacamp.restapi.repository.interfaces;
 
 import com.enigmacamp.restapi.model.CourseType;
 import org.springframework.data.jpa.domain.Specification;

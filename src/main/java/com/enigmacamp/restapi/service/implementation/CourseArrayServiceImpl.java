@@ -1,13 +1,13 @@
-package com.enigmacamp.restapi.service;
+package com.enigmacamp.restapi.service.implementation;
 
 import com.enigmacamp.restapi.exception.NotFoundException;
 import com.enigmacamp.restapi.model.Course;
-import com.enigmacamp.restapi.repository.CourseArrayRepository;
+import com.enigmacamp.restapi.repository.interfaces.CourseArrayRepository;
 import com.enigmacamp.restapi.repository.spec.SearchCriteria;
+import com.enigmacamp.restapi.service.interfaces.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;

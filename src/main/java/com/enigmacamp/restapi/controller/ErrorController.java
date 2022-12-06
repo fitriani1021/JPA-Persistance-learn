@@ -2,6 +2,7 @@ package com.enigmacamp.restapi.controller;
 
 import com.enigmacamp.restapi.exception.EntityExistException;
 import com.enigmacamp.restapi.exception.NotFoundException;
+import com.enigmacamp.restapi.exception.RestTemplateException;
 import com.enigmacamp.restapi.model.response.ErrorResponse;
 import org.hibernate.action.internal.EntityActionVetoException;
 import org.springframework.http.HttpStatus;
@@ -16,6 +17,11 @@ import java.util.List;
 
 @RestControllerAdvice
 public class ErrorController {
+    
+    @ExceptionHandler(RestTemplateException.class)
+    ResponseEntity<ErrorResponse> restTemplateException(RestTemplateException exception){
+        return ResponseEntity.status(HttpStatus.UNPROCESSABLE_ENTITY).body(new ErrorResponse("X07",exception.getMessage()));
+    }
     
     @ExceptionHandler(EntityActionVetoException.class)
     public ResponseEntity<ErrorResponse> handleEntityExistViolationException(EntityExistException exception) {

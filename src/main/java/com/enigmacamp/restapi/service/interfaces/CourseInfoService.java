@@ -1,4 +1,4 @@
-package com.enigmacamp.restapi.service;
+package com.enigmacamp.restapi.service.interfaces;
 
 import com.enigmacamp.restapi.model.CourseInfo;
 import org.springframework.data.domain.Page;

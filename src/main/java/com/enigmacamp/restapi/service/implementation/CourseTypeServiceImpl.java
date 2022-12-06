@@ -1,12 +1,13 @@
-package com.enigmacamp.restapi.service;
+package com.enigmacamp.restapi.service.implementation;
 
 import com.enigmacamp.restapi.exception.EntityExistException;
 import com.enigmacamp.restapi.exception.NotFoundException;
 import com.enigmacamp.restapi.model.Course;
 import com.enigmacamp.restapi.model.CourseType;
-import com.enigmacamp.restapi.repository.CourseRepository;
-import com.enigmacamp.restapi.repository.CourseTypeRepository;
+import com.enigmacamp.restapi.repository.interfaces.CourseRepository;
+import com.enigmacamp.restapi.repository.interfaces.CourseTypeRepository;
 import com.enigmacamp.restapi.repository.spec.CourseTypeSpec;
+import com.enigmacamp.restapi.service.interfaces.CourseTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -16,15 +17,13 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 
 @Service
-public class CourseTypeServiceImpl implements CourseTypeService{
+public class CourseTypeServiceImpl implements CourseTypeService {
     @Autowired
     private CourseRepository courseRepository;
     @Autowired

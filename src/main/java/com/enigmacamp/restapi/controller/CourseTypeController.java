@@ -1,11 +1,9 @@
 package com.enigmacamp.restapi.controller;
 
-import com.enigmacamp.restapi.model.Course;
 import com.enigmacamp.restapi.model.CourseType;
-import com.enigmacamp.restapi.model.request.CourseRequest;
 import com.enigmacamp.restapi.model.response.PagingResponse;
 import com.enigmacamp.restapi.model.response.SuccessResponse;
-import com.enigmacamp.restapi.service.CourseTypeService;
+import com.enigmacamp.restapi.service.interfaces.CourseTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.enigmacamp.restapi.service;
+package com.enigmacamp.restapi.service.interfaces;
 
 import com.enigmacamp.restapi.model.Course;
 import com.enigmacamp.restapi.model.CourseType;

@@ -1,10 +1,10 @@
-package com.enigmacamp.restapi.service;
+package com.enigmacamp.restapi.service.implementation;
 
 import com.enigmacamp.restapi.exception.EntityExistException;
 import com.enigmacamp.restapi.exception.NotFoundException;
 import com.enigmacamp.restapi.model.CourseInfo;
-import com.enigmacamp.restapi.model.CourseType;
-import com.enigmacamp.restapi.repository.CourseInfoRepository;
+import com.enigmacamp.restapi.repository.interfaces.CourseInfoRepository;
+import com.enigmacamp.restapi.service.interfaces.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
@@ -13,11 +13,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
-public class CourseInfoServiceImpl implements CourseInfoService{
+public class CourseInfoServiceImpl implements CourseInfoService {
     @Autowired
     private CourseInfoRepository courseInfoRepository;
     

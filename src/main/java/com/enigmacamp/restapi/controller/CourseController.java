@@ -1,12 +1,11 @@
 package com.enigmacamp.restapi.controller;
 
 import com.enigmacamp.restapi.model.Course;
-import com.enigmacamp.restapi.model.CourseType;
 import com.enigmacamp.restapi.model.request.CourseRequest;
 import com.enigmacamp.restapi.model.response.PagingResponse;
 import com.enigmacamp.restapi.model.response.SuccessResponse;
 import com.enigmacamp.restapi.repository.spec.SearchCriteria;
-import com.enigmacamp.restapi.service.CourseService;
+import com.enigmacamp.restapi.service.interfaces.CourseService;
 import com.enigmacamp.restapi.util.QueryOperator;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
